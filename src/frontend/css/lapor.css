@@ -12,8 +12,6 @@ body {
 h2 {
     font-weight: 500;
     font-size: 35px;
-    /* margin: 0px 25px 25px; */
-    /* padding-top: 25px; */
     margin-top: 0px;
     margin-bottom: 20px;
 }
@@ -49,7 +47,6 @@ nav {
 
 nav ul li {
     display: inline-block;
-    /* margin: 10px 0; */
     padding-right: 15px;
 }
 
@@ -61,23 +58,13 @@ nav ul li a:hover {
     color: #c51e20;
 }
 
+/* Body */
 .container-2 {
-    /* width: 85%;
-    margin: 0 auto; */
-    /* margin: 0 auto; */
-    /* align-items: center; */
-    /* width: 90%; */
     border-width: 0px 85px;
     border-color: #dadada;
     border-style: solid;
     padding: 25px 40px;
 }
-
-/* .container-2:after {
-    content: "";
-    display: block;
-    clear: both;
-} */
 
 .row:after {
     content: "";
@@ -117,15 +104,13 @@ input[type=url] {
 
 .disclaimer-box {
     width: 90%;
-    /* width: 100px; */
     background: #c54f4f;
     padding: auto;
     margin: auto;
     color: white;
     text-align: center;
-    letter-spacing: 1.15px;
-    line-height: 1.15;
-    /* font-size: 15px; */
+    letter-spacing: 1.1px;
+    line-height: 1.1;
 }
 
 .disclaimer-box h3 {
@@ -139,10 +124,10 @@ input[type=url] {
 #submit-button {
     color: white;
     background-color: #c54f4f;
-    width: 125px;
+    width: 130px;
     border-radius: 5px;
     font-size: 20px;
-    padding: 5px 20px;
+    padding: 8px 20px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -166,7 +151,6 @@ footer {
 
 #location h6 {
     font-size: 20px;
-    /* margin-bottom: 20px; */
     padding-top: 20px;
     margin: 0px;
 }
