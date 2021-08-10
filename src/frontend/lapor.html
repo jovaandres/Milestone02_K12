@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AntiHoax</title>
+	<link rel="stylesheet" type="text/css" href="css/lapor.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<!-- <script type="text/javascript" src="script.js"></script> -->
+	<link rel = "icon" href = "./img/logo.png" type = "image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html">
+                    <img src="img/antihoax.png">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="news_list.html">News List</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-2">
+            <h2>Lapor Hoaks</h2>
+            <div class="row">
+                <div class="column-1">
+                    <form method="post">
+                        <label for="link">
+                            <h3>Link Berita</h3>
+                        </label>
+                        <input type="url" name="link" id="link" placeholder="Enter the link here">
+                        <label for="argument">
+                            <h3>Alasan</h3>
+                        </label>
+                        <!-- <input type="text" name="argument" id="argument" placeholder="Enter the explanation here"> -->
+                        <textarea name="argument" class="text-area" placeholder="Enter the explanation here"></textarea>
+                    </form>
+                </div>
+                <div class="column-2">
+                    <div class="disclaimer-box">
+                        <h3>Disclaimer</h3>
+                        <p>Link berita yang dilaporkan pada laman web ini 
+                        tidak akan langsung dinyatakan sebagai hoaks. 
+                        Berita yang telah dilaporkan akan ditampilkan di 
+                        News List dan akan dikonfirmasi kebenarannya oleh 
+                        pengunjung-pengunjung laman web ini. Anda juga 
+                        dapat mengonfirmasi kebenaran berita lain pada laman 
+                        web ini di halaman news list</p>
+                    </div>
+                </div>                
+            </div>
+            <!-- <center><button type="submit" id="submit-button">Submit</button></center> -->
+            <button type="submit" id="submit-button" style="margin: auto;">Submit</button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <img src="img/antihoax-white.jpg" width="200px">
+            <div id="contact-info">
+                <p>Ada saran, kritik, atau pertanyaan? Hubungi kami di:</p>
+                <p>&#9993; antihoax@example.com</p>
+                <p>&#9743; +62 22123789</p>
+            </div>
+            <div id="location">
+                <h6>PT Antihoax Nusantara</h6>
+                <p>Jalan Mawar Raya No. 20, Bandung</p>
+                <p>Jawa Barat</p>
+            </div>
+            <div id="copyright">
+                <p>Copyright &copy; 2021 Antihoax Nusantara</p>
+            </div>
+        </div>
+    </footer>
+</body>

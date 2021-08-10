@@ -1,0 +1,177 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 35px;
+    /* margin: 0px 25px 25px; */
+    /* padding-top: 25px; */
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Navigation Bar */
+.container {
+    margin: 0 auto;
+    align-items: center;
+    width: 90%;
+}
+
+.navbar {
+    margin: 0px 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    /* margin: 10px 0; */
+    padding-right: 15px;
+}
+
+nav ul li a {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: #c51e20;
+}
+
+.container-2 {
+    /* width: 85%;
+    margin: 0 auto; */
+    /* margin: 0 auto; */
+    /* align-items: center; */
+    /* width: 90%; */
+    border-width: 0px 85px;
+    border-color: #dadada;
+    border-style: solid;
+    padding: 25px 40px;
+}
+
+/* .container-2:after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-1 {
+    float: left;
+    width: 70%;
+}
+
+.column-2 {
+    float: left;
+    width: 30%;
+}
+
+input[type=url] {
+    width: 90%;
+    padding: 10px;
+    font-family: Century Gothic;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.text-area {
+    width: 90%;
+    height: 170px;
+    padding: 10px;
+    font-family: Century Gothic;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.disclaimer-box {
+    width: 90%;
+    /* width: 100px; */
+    background: #c54f4f;
+    padding: auto;
+    margin: auto;
+    color: white;
+    text-align: center;
+    letter-spacing: 1.15px;
+    line-height: 1.15;
+    /* font-size: 15px; */
+}
+
+.disclaimer-box h3 {
+    padding-top: 10px;
+}
+
+.disclaimer-box p {
+    padding-bottom: 10px;
+}
+
+#submit-button {
+    color: white;
+    background-color: #c54f4f;
+    width: 125px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: Century Gothic;
+    text-align: center;
+}
+
+#submit-button:hover {
+    background-color: #6a0001;
+}
+
+footer {
+    background-color: #6a0001;
+    padding: 40px 20px 5px;
+    color: white;
+}
+
+#contact-info {
+    padding: 15px 0px;
+}
+
+#location h6 {
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+    padding-top: 20px;
+    margin: 0px;
+}
+
+#copyright {
+    text-align: center;
+    margin-top: 30px;
+}
