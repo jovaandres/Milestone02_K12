@@ -14,7 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "AntiHoax || Home",
+        "css" => "home.css"
+    ]);
+});
+
+Route::get('/news-list', function () {
+    return view('news-list', [
+        "title" => "AntiHoax || News List",
+        "css" => "news-list.css"
+    ]);
 });
 
 Route::get('/testing', 'NewsController@index');
