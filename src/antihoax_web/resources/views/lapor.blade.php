@@ -1,5 +1,10 @@
 @extends('layouts/main')
 
+@section('title')
+    <title>AntiHoax || Laporkan</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/lapor.css') }}" />
+@endsection
+
 @section('container')
     <div class="container-2">
         <h2>Lapor Hoaks</h2>
@@ -19,16 +24,16 @@
             <div class="column-2">
                 <div class="disclaimer-box">
                     <h3>Disclaimer</h3>
-                    <p>Link berita yang dilaporkan pada laman web ini 
-                    tidak akan langsung dinyatakan sebagai hoaks. 
-                    Berita yang telah dilaporkan akan ditampilkan di 
-                    News List dan akan dikonfirmasi kebenarannya oleh 
-                    pengunjung-pengunjung laman web ini. Anda juga 
-                    dapat mengonfirmasi kebenaran berita lain pada laman 
+                    <p>Link berita yang dilaporkan pada laman web ini
+                    tidak akan langsung dinyatakan sebagai hoaks.
+                    Berita yang telah dilaporkan akan ditampilkan di
+                    News List dan akan dikonfirmasi kebenarannya oleh
+                    pengunjung-pengunjung laman web ini. Anda juga
+                    dapat mengonfirmasi kebenaran berita lain pada laman
                     web ini di halaman news list</p>
                 </div>
-            </div>                
+            </div>
         </div>
         <center><button type="submit" id="submit-button" style="margin: auto;">Submit</button></center>
-    </div>    
+    </div>
 @endsection

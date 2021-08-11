@@ -1,11 +1,16 @@
 @extends('layouts/main')
 
+@section('title')
+    <title>AntiHoax || Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}" />
+@endsection
+
 @section('container')
     <div class="banner">
         <div class="container-1">
             <p>Tidak yakin dengan keaslian berita?</p>
             <p1>Cantumkan linknya di sini!</p1>
-            <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
+            <form id="cekFakta" method="post" action="{{ route('home.news') }}">
                 @csrf
                 <input type="text" id="link" name="link" placeholder="Enter the link here">
                 <input type="submit" value="Cek Fakta">

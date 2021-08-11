@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ $title }}</title>
-    <link rel="stylesheet" type="text/css" href="css/{{ $css }}" />
+    @yield('title')
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<script type="text/javascript" src="script.js"></script>
     <link rel="icon" href="img/logo.png" type="image/x-icon" />
@@ -69,7 +68,7 @@
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
-        }   
+        }
     </script>
   </body>
 </html>

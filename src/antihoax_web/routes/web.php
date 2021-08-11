@@ -14,33 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', [
-        "title" => "AntiHoax || Home",
-        "css" => "home.css"
-    ]);
+    return view('home');
 });
 
-Route::get('/news-list', function () {
-    return view('news-list', [
-        "title" => "AntiHoax || News List",
-        "css" => "news-list.css"
-    ]);
-});
+Route::get('/news-list', 'NewsController@news_list')->name('home.news');
 
 Route::get('/about', function () {
-    return view('about', [
-        "title" => "AntiHoax || About Us",
-        "css" => "about.css"
-    ]);
+    return view('about');
 });
 
 Route::get('/lapor', function () {
-    return view('lapor', [
-        "title" => "AntiHoax || Laporkan",
-        "css" => "lapor.css"
-    ]);
+    return view('lapor');
 });
 
-Route::post('/news-list/cek', 'NewsController@check')->name('news.cek');
-
-Route::get('/testing', 'NewsController@index');
+Route::post('/news-list', 'NewsController@cek_news')->name('news.cek');
