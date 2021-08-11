@@ -81,6 +81,10 @@ nav ul li {
   margin: 10px 0;
 }
 
+nav ul li a:hover {
+  color: #c51e20;
+}
+
 /* main */
 main {
   padding: 0 30px;

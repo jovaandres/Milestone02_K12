@@ -27,4 +27,18 @@ Route::get('/news-list', function () {
     ]);
 });
 
+Route::get('/about', function () {
+    return view('about', [
+        "title" => "AntiHoax || About Us",
+        "css" => "about.css"
+    ]);
+});
+
+Route::get('/lapor', function () {
+    return view('lapor', [
+        "title" => "AntiHoax || Laporkan",
+        "css" => "lapor.css"
+    ]);
+});
+
 Route::get('/testing', 'NewsController@index');

@@ -213,6 +213,9 @@ nav ul li {
   display: inline-block;
   margin: 10px 0;
 }
+nav ul li a:hover {
+  color: #c51e20;
+}
 
 footer {
   background-color: #6a0001;
