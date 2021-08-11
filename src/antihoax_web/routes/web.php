@@ -41,4 +41,6 @@ Route::get('/lapor', function () {
     ]);
 });
 
+Route::post('/news-list/cek', 'NewsController@check')->name('news.cek');
+
 Route::get('/testing', 'NewsController@index');

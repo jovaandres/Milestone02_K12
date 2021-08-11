@@ -99,20 +99,21 @@ main {
 
 #link-box {
   margin: 10px 0 80px 0;
-  padding: 10px 0px 10px 30px;
+  padding: 10px 0px 10px 20px;
   justify-content: space-around;
   background-color: rgba(196, 196, 196, 255);
 }
 
 #cek-fakta-link,
 #cek-fakta-submit {
+    position: relative;
   background-color: transparent;
   border: transparent;
   padding: 10px;
 }
 
 #cek-fakta-link {
-  color: rgba(137, 137, 137, 255);
+    width: 80%;
 }
 
 #cek-fakta-submit {
@@ -123,6 +124,27 @@ main {
 #link-box .vl {
   border-left: 1px solid black;
   height: 35px;
+}
+
+form input[type="text"] {
+    position: relative;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #c4c4c4;
+}
+
+input[type="submit"] {
+    position: relative;
+    background-color: #c4c4c4;
+    color: #c51e20;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
 }
 
 /* News List */

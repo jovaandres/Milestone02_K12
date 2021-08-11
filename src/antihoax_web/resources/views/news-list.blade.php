@@ -15,23 +15,19 @@
           <div id="link-box">
             <div class="row">
               <div class="col-1">
-                <form action="">
+                <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
+                    @csrf
                   <input
                     type="text"
                     id="cek-fakta-link"
                     name="cek-fakta-link"
-                    value="Enter the link here"
+                    placeholder="Enter the link here"
                   />
-                </form>
-              </div>
-              <div class="vl"></div>
-              <div class="col-2">
-                <form action="">
-                  <input
-                    type="submit"
-                    id="cek-fakta-submit"
-                    value="Cek Fakta"
-                  />
+                    <input
+                        type="submit"
+                        id="cek-fakta-submit"
+                        value="Cek Fakta"
+                    />
                 </form>
               </div>
             </div>

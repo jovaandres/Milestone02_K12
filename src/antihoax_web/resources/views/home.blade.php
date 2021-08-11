@@ -5,7 +5,8 @@
         <div class="container-1">
             <p>Tidak yakin dengan keaslian berita?</p>
             <p1>Cantumkan linknya di sini!</p1>
-            <form>
+            <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
+                @csrf
                 <input type="text" id="link" name="link" placeholder="Enter the link here">
                 <input type="submit" value="Cek Fakta">
             </form>
@@ -53,7 +54,7 @@
                 <a href="lapor.html">Laporkan disini
                 </a>
             </div>
-        </div>	
+        </div>
     </div>
 
 @endsection

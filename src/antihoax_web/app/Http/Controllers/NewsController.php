@@ -18,6 +18,11 @@ class NewsController extends Controller
         return $posts;
     }
 
+    public function check(Request $request)
+    {
+        return $request;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
