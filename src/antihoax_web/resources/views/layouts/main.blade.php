@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     @yield('title')
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<script type="text/javascript" src="script.js"></script>
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/admin.css') }}">
+      <script type="text/javascript" src="script.js"></script>
     <link rel="icon" href="img/logo.png" type="image/x-icon" />
   </head>
   <body>

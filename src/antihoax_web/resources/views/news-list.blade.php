@@ -24,9 +24,11 @@
                     <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
                         @csrf
                         <input
-                            type="text"
+                            type="url"
                             id="link"
                             name="link"
+                            required
+                            value="{{ old('link') }}"
                             placeholder="Enter the link here"
                         />
                         <input
@@ -41,10 +43,10 @@
     </div>
     <div class="hl"></div>
     <div id="news-list">
-        <div class="news-box">
-            <div class="row">
-                @if (count($results) > 0 )
-                    @foreach ($results as $result)
+        @if (count($results) > 0 )
+            @foreach ($results as $result)
+                <div class="news-box">
+                    <div class="row">
                         <div class="col-1">
                             <h5 class="news-link">
                                 {{ $result->link }}
@@ -59,18 +61,18 @@
                             <div class="persentase-hoaks">50%</div>
                             <div class="btn-hoaks">Hoaks</div>
                         </div>
-                    @endforeach
-                @else
-                    <div class="col-1">
-                        <h5 class="news-link">
-                            Link tidak ada
-                        </h5>
-                        <h6 class="news-analysis">
-                            Hasil tidak ditemukan
-                        </h6>
                     </div>
-                @endif
+                </div>
+            @endforeach
+        @else
+            <div class="col-1">
+                <h5 class="news-link">
+                    Link tidak ada
+                </h5>
+                <h6 class="news-analysis">
+                    Hasil tidak ditemukan
+                </h6>
             </div>
-        </div>
+        @endif
     </div>
 @endsection

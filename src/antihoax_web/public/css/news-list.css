@@ -93,6 +93,7 @@ main {
   background-color: rgba(197, 79, 79, 255);
   padding: 7px;
   color: white;
+    margin-bottom: 10px;
   letter-spacing: 1.5px;
   line-height: 1.5;
 }
@@ -126,7 +127,7 @@ main {
   height: 35px;
 }
 
-form input[type="text"] {
+form input[type="url"] {
     position: relative;
     padding: 12px;
     padding-left: 20px;

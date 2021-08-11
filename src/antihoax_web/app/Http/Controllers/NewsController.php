@@ -4,19 +4,34 @@ namespace App\Http\Controllers;
 
 use App\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
      public function store(Request $request)
     {
-        $news = new News;
-        $news->link = request('link');
-        $news->reason = request('argument');
-        $news->save();
-        
-        return redirect('/news-list');
-    }
+        $req = $request->validate([
+            'link' => ['required', 'url'],
+            'argument' => ['required']
+        ]);
 
+        DB::beginTransaction();
+        try {
+            $news = new News;
+            $news->link = $req['link'];
+            $news->reason = $req['argument'];
+            if ($news->save()) {
+                DB::commit();
+                return back()->with('success', 'Berhasil Submit');
+            } else {
+                DB::rollBack();
+                return back()->with('failed', 'Internal Server Error');
+            }
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->with('failed', $e);
+        }
+    }
 
     public function news_list()
     {
@@ -26,7 +41,10 @@ class NewsController extends Controller
 
     public function cek_news(Request $request)
     {
-        $results = News::where('link', $request->link)->get();
+        $req = $request->validate([
+            'link' => ['required', 'url']
+        ]);
+        $results = News::where('link', $req['link'])->get();
         return view('news-list', compact('results'));
     }
 }

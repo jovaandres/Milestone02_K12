@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/news-list', 'NewsController@news_list')->name('home.news');
+Route::post('/news-list', 'NewsController@cek_news')->name('news.cek');
 
 Route::get('/about', function () {
     return view('about');
@@ -26,7 +27,4 @@ Route::get('/about', function () {
 Route::get('/lapor', function () {
     return view('lapor');
 });
-
-Route::post('/news-list', 'NewsController@cek_news')->name('news.cek');
-
-Route::post('lapor', 'NewsController@store');
+Route::post('/lapor', 'NewsController@store')->name('home.lapor');

@@ -15,7 +15,7 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('author');
+            $table->string('author')->default('Anonymous');
             $table->string('link');
             $table->longText('reason');
             $table->integer('upvote')->default(0);

@@ -69,7 +69,7 @@
   text-align: center;
   color: #ffffff;
 }
-.banner form input[type="text"] {
+.banner form input[type="url"] {
   position: relative;
   top: 120px;
   left: 580px;
