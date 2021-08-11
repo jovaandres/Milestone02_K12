@@ -72,7 +72,7 @@
             </div>
             <div class="section-3">
                 <h1>Menemukan hoaks?</h1>
-                <a href="lapor.html">Laporkan disini
+                <a href="/lapor">Laporkan disini
                 </a>
             </div>
         </div>

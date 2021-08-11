@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
+
+    public function index() {
+        $news = News::all();
+        return $news;
+    }
      public function store(Request $request)
     {
         $req = $request->validate([
@@ -46,5 +51,43 @@ class NewsController extends Controller
         ]);
         $results = News::where('link', 'LIKE', "%{$req['link']}%")->get();
         return view('news-list', compact('results'));
+    }
+
+    public function upvote(Request $request)
+    {
+        $news = News::where('link', $request->link)->get()->first();
+        DB::beginTransaction();
+        try {
+            $news->upvote++;
+            if ($news->save()) {
+                DB::commit();
+                return back()->with('success', 'Berhasil Submit');
+            } else {
+                DB::rollBack();
+                return back()->with('failed', 'Internal Server Error');
+            }
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->with('failed', $e);
+        }
+    }
+
+    public function downvote(Request $request)
+    {
+        $news = News::where('link', $request->link)->get()->first();
+        DB::beginTransaction();
+        try {
+            $news->downvote++;
+            if ($news->save()) {
+                DB::commit();
+                return back()->with('success', 'Berhasil Submit');
+            } else {
+                DB::rollBack();
+                return back()->with('failed', 'Internal Server Error');
+            }
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->with('failed', $e);
+        }
     }
 }

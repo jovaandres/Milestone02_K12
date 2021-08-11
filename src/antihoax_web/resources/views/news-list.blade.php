@@ -57,9 +57,40 @@
                         </div>
                         <div class="vl"></div>
                         <div class="col-2">
-                            <div class="btn-benar">Benar</div>
-                            <div class="persentase-hoaks">50%</div>
-                            <div class="btn-hoaks">Hoaks</div>
+                            <form method="post" action="{{ route('news.upvote') }}">
+                                @csrf
+                                <input
+                                    type="text"
+                                    value="{{ $result->link }}"
+                                    name="link"
+                                    id="link"
+                                    style="visibility: hidden"
+                                >
+                                <button class="btn-benar">Benar</button>
+                            </form>
+                            @php($percentage = round(($result->upvote/($result->upvote + $result->downvote))*100, 2))
+                            @if($percentage >= 80)
+                                <div class="persentase-hoaks" style="color: #4aa340">{{ $percentage }}%</div>
+                            @elseif($percentage >= 60)
+                                <div class="persentase-hoaks" style="color: #91dd5a">{{ $percentage }}%</div>
+                            @elseif($percentage >= 40)
+                                <div class="persentase-hoaks" style="color: #cfec4c">{{ $percentage }}%</div>
+                            @elseif($percentage >= 20)
+                                <div class="persentase-hoaks" style="color: #f8ab26">{{ $percentage }}%</div>
+                            @else
+                                <div class="persentase-hoaks" style="color: #f82d26">{{ $percentage }}%</div>
+                            @endif
+                            <form method="post" action="{{ route('news.downvote') }}">
+                                @csrf
+                                <input
+                                    type="text"
+                                    value="{{ $result->link }}"
+                                    name="link"
+                                    id="link"
+                                    style="visibility: hidden"
+                                >
+                                <button class="btn-hoaks">Hoaks</button>
+                            </form>
                         </div>
                     </div>
                 </div>

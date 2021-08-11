@@ -28,3 +28,8 @@ Route::get('/lapor', function () {
     return view('lapor');
 });
 Route::post('/lapor', 'NewsController@store')->name('home.lapor');
+
+Route::post('/news-list/upvote', 'NewsController@upvote')->name('news.upvote');
+Route::post('/news-list/downvote', 'NewsController@downvote')->name('news.downvote');
+
+Route::get('/testing', 'NewsController@index');
