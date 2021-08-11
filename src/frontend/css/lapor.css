@@ -115,6 +115,7 @@ input[type=url] {
 
 .disclaimer-box h3 {
     padding-top: 10px;
+    font-weight: bold;
 }
 
 .disclaimer-box p {
