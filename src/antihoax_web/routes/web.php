@@ -28,3 +28,5 @@ Route::get('/lapor', function () {
 });
 
 Route::post('/news-list', 'NewsController@cek_news')->name('news.cek');
+
+Route::post('lapor', 'NewsController@store');

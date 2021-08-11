@@ -11,6 +11,7 @@
         <div class="row">
             <div class="column-1">
                 <form method="post">
+                    @csrf
                     <label for="link">
                         <h3>Link Berita</h3>
                     </label>
@@ -19,6 +20,7 @@
                         <h3>Alasan</h3>
                     </label>
                     <textarea name="argument" class="text-area" placeholder="Enter the explanation here"></textarea>
+                    <center><button type="submit" id="submit-button" style="margin: auto;">Submit</button></center>
                 </form>
             </div>
             <div class="column-2">
@@ -34,6 +36,5 @@
                 </div>
             </div>
         </div>
-        <center><button type="submit" id="submit-button" style="margin: auto;">Submit</button></center>
     </div>
 @endsection
