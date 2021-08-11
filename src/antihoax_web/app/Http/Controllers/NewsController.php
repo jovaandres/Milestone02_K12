@@ -44,7 +44,7 @@ class NewsController extends Controller
         $req = $request->validate([
             'link' => ['required', 'url']
         ]);
-        $results = News::where('link', $req['link'])->get();
+        $results = News::where('link', 'LIKE', "%{$req['link']}%")->get();
         return view('news-list', compact('results'));
     }
 }
