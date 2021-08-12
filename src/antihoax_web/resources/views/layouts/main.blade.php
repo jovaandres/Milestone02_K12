@@ -23,10 +23,10 @@
             <a href=""></a>
             <ul>
               <li>
-                <a href="/lapor">Menemukan hoaks? <span>Laporkan</span></a>
+                <a href="{{ route('home.lapor') }}">Menemukan hoaks? <span>Laporkan</span></a>
               </li>
-              <li><a href="/news-list">News List</a></li>
-              <li><a href="/about">About Us</a></li>
+              <li><a href="{{ route('home.news') }}">News List</a></li>
+              <li><a href="{{ route('home.about') }}">About Us</a></li>
             </ul>
           </nav>
         </div>
