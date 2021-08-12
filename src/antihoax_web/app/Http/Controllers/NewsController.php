@@ -38,6 +38,21 @@ class NewsController extends Controller
         }
     }
 
+    public function home()
+    {
+        return view('home');
+    }
+
+    public function lapor()
+    {
+        return view('lapor');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
     public function news_list()
     {
         $results = News::all();

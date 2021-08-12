@@ -13,23 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'NewsController@home')->name('home.home');
 
 Route::get('/news-list', 'NewsController@news_list')->name('home.news');
+
 Route::post('/news-list', 'NewsController@cek_news')->name('news.cek');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'NewsController@about')->name('home.about');
 
-Route::get('/lapor', function () {
-    return view('lapor');
-});
-Route::post('/lapor', 'NewsController@store')->name('home.lapor');
+Route::get('/lapor', 'NewsController@lapor')->name('home.lapor');
+
+Route::post('/lapor', 'NewsController@store')->name('lapor.submit');
 
 Route::post('/news-list/upvote', 'NewsController@upvote')->name('news.upvote');
+
 Route::post('/news-list/downvote', 'NewsController@downvote')->name('news.downvote');
 
 Route::get('/testing', 'NewsController@index');

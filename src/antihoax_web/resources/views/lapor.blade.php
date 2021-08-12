@@ -10,7 +10,7 @@
         <h2>Lapor Hoaks</h2>
         <div class="row">
             <div class="column-1">
-                <form id="submitNews" method="post" action="{{ route('home.lapor') }}">
+                <form id="submitNews" method="post" action="{{ route('lapor.submit') }}">
                     @csrf
                     <label for="link">
                         <h3>Link Berita</h3>
