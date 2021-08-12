@@ -8,6 +8,17 @@
 @section('container')
     <div class="container-2">
         <h2>Lapor Hoaks</h2>
+        @if (session('success'))
+            <div class="alert alert-success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ session('success') }}
+            </div>
+        @elseif(session('failed'))
+            <div class="alert alert-failed">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ session('failed') }}
+            </div>
+        @endif
         <div class="row">
             <div class="column-1">
                 <form id="submitNews" method="post" action="{{ route('lapor.submit') }}">

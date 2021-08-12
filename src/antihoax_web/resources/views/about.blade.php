@@ -7,7 +7,7 @@
 
 @section('container')
 	<div class="container-2">
-		<img src="img/antihoax.png">
+		<img src="{{ asset('img/antihoax.png') }}">
 		<div class="box">
 			<p>"Truth! Truth! Truth!"</p>
 		</div>

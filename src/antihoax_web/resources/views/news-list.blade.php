@@ -42,6 +42,17 @@
         </div>
     </div>
     <div class="hl"></div>
+    @if (session('success'))
+        <div class="alert alert-success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('success') }}
+        </div>
+    @elseif(session('failed'))
+        <div class="alert alert-failed">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('failed') }}
+        </div>
+    @endif
     <div id="news-list">
         @if (count($results) > 0 )
             @foreach ($results as $result)
@@ -80,6 +91,7 @@
                             @else
                                 <div class="persentase-hoaks" style="color: #f82d26">{{ $percentage }}%</div>
                             @endif
+                            <p>{{ $result->upvote + $result->downvote.' votes' }} </p>
                             <form method="post" action="{{ route('news.downvote') }}">
                                 @csrf
                                 <input

@@ -1,10 +1,20 @@
 .alert {
+    max-width: 200px;
+    border-radius: 16px;
     position: center;
-    padding: 20px;
-    background-color: #f44336; /* Red */
+    padding: 12px;
     color: white;
     margin-bottom: 15px;
 }
+
+.alert-success {
+    background-color: #4bd73a;
+}
+
+.alert-failed {
+    background-color: #f44336;
+}
+
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -41,7 +51,7 @@ header {
     display: inline-block;
     margin: 10px 0;
   }
-  
+
   nav ul li a:hover {
     color: #c51e20;
   }
@@ -52,16 +62,16 @@ footer {
     padding: 50px 60px 20px 60px;
     color: white;
   }
-  
+
   #contact-info {
     margin: 50px 0;
   }
-  
+
   #copyright {
     text-align: center;
     margin-top: 30px;
   }
-  
+
   #back-to-top {
     visibility: hidden;
     position: fixed;
@@ -77,7 +87,7 @@ footer {
     padding: 15px;
     border-radius: 4px;
   }
-  
+
   #back-to-top:hover {
     background-color: #555;
   }

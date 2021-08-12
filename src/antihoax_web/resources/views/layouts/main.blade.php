@@ -6,8 +6,7 @@
     @yield('title')
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
       <link rel="stylesheet" type="text/css" href="{{ asset('css/admin.css') }}">
-      <script type="text/javascript" src="script.js"></script>
-    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/x-icon" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -40,7 +39,7 @@
     </main>
     <footer>
       <div class="container">
-        <img src="img/antihoax-white.jpg" width="200px" alt="" />
+        <img src="{{ asset('img/antihoax-white.jpg') }}" width="200px" alt="" />
         <div id="contact-info">
           <p>Ada saran, kritik, atau pertanyaan? Hubungi kami di:</p>
           <p>&#9993; antihoax@example.com</p>

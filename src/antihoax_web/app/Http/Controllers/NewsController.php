@@ -34,7 +34,7 @@ class NewsController extends Controller
             }
         } catch (\Exception $e) {
             DB::rollBack();
-            return back()->with('failed', $e);
+            return back()->with('failed', 'Link sudah ada');
         }
     }
 
@@ -76,7 +76,7 @@ class NewsController extends Controller
             $news->upvote++;
             if ($news->save()) {
                 DB::commit();
-                return back()->with('success', 'Berhasil Submit');
+                return back()->with('success', 'Berhasil Vote');
             } else {
                 DB::rollBack();
                 return back()->with('failed', 'Internal Server Error');
@@ -95,7 +95,7 @@ class NewsController extends Controller
             $news->downvote++;
             if ($news->save()) {
                 DB::commit();
-                return back()->with('success', 'Berhasil Submit');
+                return back()->with('success', 'Berhasil Vote');
             } else {
                 DB::rollBack();
                 return back()->with('failed', 'Internal Server Error');

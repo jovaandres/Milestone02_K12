@@ -10,7 +10,7 @@
         <div class="container-1">
             <p>Tidak yakin dengan keaslian berita?</p>
             <p1>Cantumkan linknya di sini!</p1>
-            <form id="cekFakta" method="post" action="{{ route('home.news') }}">
+            <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
                 @csrf
                 <input type="url"
                        id="link"
@@ -20,7 +20,7 @@
                        placeholder="Enter the link here">
                 <input type="submit" value="Cek Fakta">
             </form>
-            <p2>Menemukan hoaks?<a href="/lapor">Laporkan disini</a></p2>
+            <p2>Menemukan hoaks?<a href="{{ route('home.lapor') }}"><b><u>Laporkan disini</u></b></a></p2>
         </div>
     </div>
     <div class="info">
@@ -42,7 +42,7 @@
                 <h1>Apa contoh dampak dari hoaks?</h1>
             </div>
             <div class="section-2">
-                <img src="img/info-1.png" align="left">
+                <img src="{{ asset('img/info-1.png') }}" align="left">
                 <h2>Perusakan Ambulans di Yogyakarta</h2>
                 <p>Seorang pria berinisial IZ alias Unyil (28) diamankan jajaran kepolisian karena aksi perusakan
                     terhadap satu unit mobil ambulans pengangkut pasien Covid-19. Kejadian tersebut berlangsung di Jalan
@@ -72,7 +72,7 @@
             </div>
             <div class="section-3">
                 <h1>Menemukan hoaks?</h1>
-                <a href="/lapor">Laporkan disini
+                <a href="{{ route('home.lapor') }}">Laporkan disini
                 </a>
             </div>
         </div>
