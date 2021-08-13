@@ -10,8 +10,7 @@
 }
 
 .container-1 {
-  width: 80%;
-  margin: 0 auto;
+  position: static;
 }
 .container-1:after {
   content: "";
@@ -70,12 +69,13 @@
   color: #ffffff;
 }
 .banner form input[type="url"] {
+    width: 44%;
   position: relative;
   top: 120px;
   left: 580px;
   padding: 12px;
   padding-left: 20px;
-  padding-right: 120px;
+  padding-right: 20px;
   margin: 8px 0px;
   display: inline-block;
   border: 1px solid #ccc;

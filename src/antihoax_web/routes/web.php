@@ -17,8 +17,6 @@ Route::get('/', 'NewsController@home')->name('home.home');
 
 Route::get('/news-list', 'NewsController@news_list')->name('home.news');
 
-Route::post('/news-list/result', 'NewsController@cek_news')->name('news.cek');
-
 Route::get('/about', 'NewsController@about')->name('home.about');
 
 Route::get('/lapor', 'NewsController@lapor')->name('home.lapor');

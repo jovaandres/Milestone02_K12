@@ -21,7 +21,7 @@
         <div id="link-box">
             <div class="row">
                 <div class="col-1">
-                    <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
+                    <form id="cekFakta" method="get" action="{{ route('home.news') }}">
                         @csrf
                         <input
                             type="url"
@@ -42,6 +42,7 @@
         </div>
     </div>
     <div class="hl"></div>
+    <div class="result-found">{{ count($results) }} result(s) found.</div>
     @if (session('success'))
         <div class="alert alert-success">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -60,7 +61,7 @@
                     <div class="row">
                         <div class="col-1">
                             <h5 class="news-link">
-                                {{ $result->link }}
+                                <a href="{{ $result->link }}">{{ $result->link }}</a>
                             </h5>
                             <h6 class="news-analysis">
                                 {{ $result->reason }}
@@ -117,5 +118,6 @@
                 </h6>
             </div>
         @endif
+            {{ $results->appends(request()->input())->links() }}
     </div>
 @endsection

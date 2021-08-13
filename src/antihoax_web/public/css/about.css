@@ -13,11 +13,11 @@ body {
     text-decoration: none;
     color: black;
   }
-  
+
   span {
     color: red;
   }
-  
+
 /* Body */
 .container {
     width: 80%;
@@ -58,4 +58,118 @@ body {
     letter-spacing: 1.5px;
     word-spacing: 3px;
     line-height: 1.5;
+}
+
+.hl {
+    border-top: 1px solid black;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.wrapper{
+    margin: 25px auto;
+    text-align: center;
+}
+
+.wrapper h1{
+    font-size: 48px;
+    color: #c51e20;
+    margin-bottom: 25px;
+}
+
+.our_team{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team_member{
+    width: 250px;
+    margin: 5px;
+    /*background: #fe8583;*/
+    background: linear-gradient(to right, #c54f4f 0%, #fd423d 51%, #c54f4f 100%);
+    border-radius: 20px;
+    padding: 12px 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #eee;
+    display: block;
+}
+
+.team_member:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.member_img{
+    background: #e9e5fa;
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+    border-radius: 50%;
+    max-width: 100px;
+    width: 100%;
+}
+
+.our_team .team_member .member_img img:hover{
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.our_team .team_member h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0px;
+    color: white;
+}
+
+.our_team .team_member p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.our_team .team_member h6{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.social{
+    margin: 5px;
+    padding: 0;
+    list-style: none;
+}
+.social li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.social li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fc3a3c;
+    border: 1px solid #fc3a3c;
+    background-color: white;
+    transition: all 0.5s ease 0s;
+}
+.social:hover li a{
+    background: #fc3a3c;
+    color: #fff;
 }

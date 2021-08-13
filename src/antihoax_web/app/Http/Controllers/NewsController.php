@@ -55,17 +55,14 @@ class NewsController extends Controller
 
     public function news_list()
     {
-        $results = News::all();
-        return view('news-list', compact('results'));
-    }
-
-    public function cek_news(Request $request)
-    {
-        $req = $request->validate([
-            'link' => ['required', 'url']
-        ]);
-        $results = News::where('link', 'LIKE', "%{$req['link']}%")->get();
-        return view('news-list', compact('results'));
+        $link = request('link');
+        if ($link) {
+            $results = News::where('link', 'LIKE', "%$link%")->orderBy('created_at', 'DESC')->paginate(5);
+            return view('news-list', compact('results'));
+        } else {
+            $results = News::orderBy('created_at', 'DESC')->paginate(5);
+            return view('news-list', compact('results'));
+        }
     }
 
     public function upvote(Request $request)

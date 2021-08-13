@@ -10,7 +10,7 @@
         <div class="container-1">
             <p>Tidak yakin dengan keaslian berita?</p>
             <p1>Cantumkan linknya di sini!</p1>
-            <form id="cekFakta" method="post" action="{{ route('news.cek') }}">
+            <form id="cekFakta" method="get" action="{{ route('home.news') }}">
                 @csrf
                 <input type="url"
                        id="link"
