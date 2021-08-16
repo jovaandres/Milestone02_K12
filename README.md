@@ -5,7 +5,7 @@
   <h3 align="center">AntiHoax</h3>
 
   <p align="center">
-    MELAPOR DAN MENGECEK HOAKS DI HALAMAN WEB ANTIHOAX
+    MELAPOR DAN MENGECEK HOAKS DI SITUS WEB ANTIHOAX
     <br />
     <a href="http://hidden-tundra-44511.herokuapp.com/" target="_blank"><strong>Kunjungi Website »</strong></a>
     <br />
