@@ -66,15 +66,19 @@ Sebuah project yang kami bangun untuk membantu orang mengidentifikasi tingkat ke
 ```sh
    composer update
    ```
-4. Generate a new application key
+4. Copy the example env file and make the required configuration changes in the .env file
+```sh
+   copy .env.example .env
+   ```
+5. Generate a new application key
 ```sh
    php artisan key:generate
    ```
-5. Run the database migrations
+6. Run the database migrations
 ```sh
    php artisan migrate
    ```
-6. Start the local development server
+7. Start the local development server
 ```sh
    php artisan serve
    ```
